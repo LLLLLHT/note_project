@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>node_arithmetic</artifactId>
+    <artifactId>note_redis</artifactId>
 
 
 </project>
