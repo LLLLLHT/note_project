@@ -2,7 +2,7 @@ package com.lht.arithmetic;
 
 import java.time.Instant;
 
-/**
+/**分布式一致性ID：雪花算法
  * 1B:符号位：0 (1表示负数、0表示正数)
  * 41B：时间戳位：2的41次方，正整数：0 - 2的41次方 -1即 (2^(41) -1 )/(1000 * 60 * 60 * 24 *365) = 69年
  * 10B：工作进程位：2的10次方=1024：工作机器id: 即可部署在1024个节点：机器ID + 数据中心ID(即 1号机器 1号数据仓库 中)  = 10B、
@@ -17,6 +17,7 @@ public class SnowflakeDemo {
     private long sequence;
     //最后时间 - UTC时间
     private volatile long lastTimestamp;
+    //时间基数：1993-12-04
     private static final long NOW_TIME = 754934400000L;
     public SnowflakeDemo(long workerId, long datacenterId) {
         this(workerId, datacenterId, false);

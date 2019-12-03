@@ -13,6 +13,7 @@
         <module>node_arithmetic</module>
         <module>node_distributed</module>
         <module>note_redis</module>
+        <module>note_basics</module>
     </modules>
     <dependencies>
         <dependency>
